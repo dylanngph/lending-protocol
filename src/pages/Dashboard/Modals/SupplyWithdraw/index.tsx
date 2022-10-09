@@ -83,11 +83,11 @@ export const SupplyWithdrawUi: React.FC<SupplyWithdrawUiProps & SupplyWithdrawPr
           iconName: assetId as IconName,
           children: formatToReadablePercentage(asset.supplyApy),
         },
-        {
-          label: t('supplyWithdraw.distributionApy'),
-          iconName: 'xvs' as IconName,
-          children: formatToReadablePercentage(asset.xvsSupplyApy),
-        },
+        // {
+        //   label: t('supplyWithdraw.distributionApy'),
+        //   iconName: 'xvs' as IconName,
+        //   children: formatToReadablePercentage(asset.xvsSupplyApy),
+        // },
       ]
     : [];
 

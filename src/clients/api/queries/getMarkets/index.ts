@@ -16,6 +16,8 @@ export interface GetMarketsOutput {
   dailyVenusWei: BigNumber | undefined;
 }
 
+const filteredMarkets = ['BNB', 'BUSD', 'CAKE'];
+
 const getMarkets = async (): Promise<GetMarketsOutput> => {
   const response = await restService<GetMarketsResponse>({
     endpoint: '/governance/venus',
@@ -50,7 +52,10 @@ const getMarkets = async (): Promise<GetMarketsOutput> => {
       return acc;
     }, []);
   }
-  return { markets, dailyVenusWei };
+  return {
+    markets: markets.filter(m => filteredMarkets.includes(m.underlyingSymbol)),
+    dailyVenusWei,
+  };
 };
 
 export default getMarkets;

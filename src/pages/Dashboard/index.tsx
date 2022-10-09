@@ -28,7 +28,7 @@ const DashboardUi: React.FC<DashboardUiProps> = ({
   userTotalSupplyBalanceCents,
 }) => {
   const styles = useStyles();
-  const [isXvsEnabled, setIsXvsEnabled] = React.useState(true);
+  const [isXvsEnabled, setIsXvsEnabled] = React.useState(false);
 
   const { suppliedAssets, supplyMarketAssets, borrowingAssets, borrowMarketAssets } =
     useMemo(() => {
@@ -70,7 +70,7 @@ const DashboardUi: React.FC<DashboardUiProps> = ({
           userTotalSupplyBalanceCents={userTotalSupplyBalanceCents}
         />
 
-        <MintRepayVai css={styles.column} />
+        {/* <MintRepayVai css={styles.column} /> */}
       </div>
 
       <Markets

@@ -64,7 +64,7 @@ export const MyAccountUi = ({
       <div css={[styles.row, styles.header]}>
         <Typography variant="h4">{t('myAccount.title')}</Typography>
 
-        <div css={styles.apyWithXvs}>
+        {/* <div css={styles.apyWithXvs}>
           <Tooltip css={styles.tooltip} title={t('myAccount.apyWithXvsTooltip')}>
             <Icon css={styles.infoIcon} name="info" />
           </Tooltip>
@@ -79,7 +79,7 @@ export const MyAccountUi = ({
           </Typography>
 
           <Toggle css={styles.toggle} value={isXvsEnabled} onChange={handleXvsToggleChange} />
-        </div>
+        </div> */}
       </div>
 
       <div css={styles.netApyContainer}>

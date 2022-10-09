@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         <Title />
 
         <div css={styles.ctaContainer}>
-          <ClaimXvsRewardButton css={styles.claimXvsButton} />
+          {/* <ClaimXvsRewardButton css={styles.claimXvsButton} /> */}
           <ConnectButton />
         </div>
       </Toolbar>

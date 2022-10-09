@@ -1,6 +1,7 @@
 import { Layout, ResetScrollOnRouteChange } from 'components';
 import React from 'react';
 import { QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
@@ -39,10 +40,10 @@ const App = () => (
                   <Switch>
                     <Route exact path={Path.ROOT} component={Dashboard} />
 
-                    <Route exact path={Path.MARKETS} component={Markets} />
-                    <Route exact path={Path.MARKET_DETAILS} component={MarketDetails} />
+                    {/* <Route exact path={Path.MARKETS} component={Markets} />
+                    <Route exact path={Path.MARKET_DETAILS} component={MarketDetails} /> */}
 
-                    <Route exact path={Path.VAULTS} component={Vaults} />
+                    {/* <Route exact path={Path.VAULTS} component={Vaults} />
 
                     <Route exact path={Path.HISTORY} component={History} />
 
@@ -53,7 +54,7 @@ const App = () => (
 
                     <Route exact path={Path.XVS} component={Xvs} />
 
-                    <Route exact path={Path.CONVERT_VRT} component={ConvertVrt} />
+                    <Route exact path={Path.CONVERT_VRT} component={ConvertVrt} /> */}
 
                     <Redirect to={Path.ROOT} />
                   </Switch>
@@ -63,6 +64,7 @@ const App = () => (
           </SuccessfulTransactionModalProvider>
         </AuthProvider>
       </MuiThemeProvider>
+      <ReactQueryDevtools initialIsOpen />
     </QueryClientProvider>
   </Web3Wrapper>
 );

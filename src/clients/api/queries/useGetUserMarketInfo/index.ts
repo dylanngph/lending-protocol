@@ -33,6 +33,8 @@ export interface UseGetUserMarketInfoOutput {
   data: Data;
 }
 
+const filteredAssets = ['BNB', 'BUSD', 'CAKE'];
+
 const vTokenAddresses: string[] = Object.values(VBEP_TOKENS).reduce(
   (acc, item) => (item.address ? [...acc, item.address] : acc),
   [],
@@ -218,7 +220,7 @@ const useGetUserMarketInfo = ({
       },
     );
 
-    let assetList = assets;
+    let assetList = assets.filter((asset: any) => filteredAssets.includes(asset.symbol));
 
     const userTotalBorrowBalanceWithUserMintedVai = userTotalBorrowBalanceCents.plus(
       userMintedVaiData

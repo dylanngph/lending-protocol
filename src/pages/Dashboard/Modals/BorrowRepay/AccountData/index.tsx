@@ -155,13 +155,13 @@ const AccountData: React.FC<AccountDataProps> = ({
         {readableBorrowApy}
       </LabeledInlineContent>
 
-      <LabeledInlineContent
+      {/* <LabeledInlineContent
         label={t('borrowRepayModal.borrow.distributionApy')}
         iconName="xvs"
         css={styles.getRow({ isLast: true })}
       >
         {readableDistributionApy}
-      </LabeledInlineContent>
+      </LabeledInlineContent> */}
 
       <Delimiter css={styles.getRow({ isLast: true })} />
 

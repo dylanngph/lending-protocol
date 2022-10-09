@@ -17,7 +17,7 @@ export const PageContainer = ({ children }: PageContainerProps) => {
         {children}
       </Box>
       <Box component="footer" css={styles.footer}>
-        <Footer />
+        {/* <Footer /> */}
       </Box>
     </>
   );

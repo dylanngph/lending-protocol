@@ -38,10 +38,10 @@ export const SidebarUi: React.FC = () => {
       {/* Desktop and tablet menu */}
       <Drawer variant="permanent" css={styles.drawer}>
         <div css={styles.drawerContent}>
-          <Toolbar css={styles.toolbar}>
+          {/* <Toolbar css={styles.toolbar}>
             <LogoDesktop css={styles.logo} />
             <LogoNoText css={styles.logoClosed} />
-          </Toolbar>
+          </Toolbar> */}
 
           <List>
             {menuItems.map(menuItem => (
